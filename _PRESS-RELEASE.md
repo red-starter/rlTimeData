@@ -17,28 +17,31 @@ Once the project moves into development, the press release can be used as a touc
  -->
  
 ## Heading ##
-  > Name the product in a way the reader (i.e. your target customers) will understand.
-
+	Easily produce a highly customized graph for your website
 ## Sub-Heading ##
-  > Describe who the market for the product is and what benefit they get. One sentence only underneath the title.
+  	People who need to make a customized svg graph for their website but don't want to learn D3
 
 ## Summary ##
-  > Give a summary of the product and the benefit. Assume the reader will not read anything else so make this paragraph good.
+	If you want an slick graph on your website, don't look any further. This product will enable you to quickly produce an infinitely scalable svg graph for your website or blog. Simply input the prameters you wish to be plotted and the settings desired to see in real time how your graph will look. Copy the resulting graph to your website and marvel at your beautiful creation. 
 
 ## Problem ##
-  > Describe the problem your product solves.
+	It is diffucult to quickly produce svg graphs if you are unfamiliar with d3 or programming in general.
 
 ## Solution ##
-  > Describe how your product elegantly solves the problem.
+	Streamline the process of data input and customization. There will be three simple steps.
+	1) specify data parameters
+	2) add values
+	3) choose graph settings
+	The resulting graph will be easily copied by the user. 
 
 ## Quote from You ##
-  > A quote from a spokesperson in your company.
+	This product made me a better human. 
 
 ## How to Get Started ##
-  > Describe how easy it is to get started.
+	The definition of easy will have to redefined to accurately encapsulated how streamlined my product will be.
 
 ## Customer Quote ##
-  > Provide a quote from a hypothetical customer that describes how they experienced the benefit.
+	This concept is so profoundly amazing that any description would fall short of it's magnificence. 
 
 ## Closing and Call to Action ##
-  > Wrap it up and give pointers where the reader should go next.
+	Check out the FAQ .
