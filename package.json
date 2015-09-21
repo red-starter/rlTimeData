@@ -1,0 +1,26 @@
+{
+  "name": "rlTimeData",
+  "version": "1.0.0",
+  "description": "create graphs quickly, effortlessly and painlessly",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/red-starter/2015-08-mvp.git"
+  },
+  "author": "Mike Sova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/red-starter/2015-08-mvp/issues"
+  },
+  "homepage": "https://github.com/red-starter/2015-08-mvp",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-livereload": "^0.1.3"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}

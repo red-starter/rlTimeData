@@ -1,0 +1,24 @@
+{
+  "name": "rlTimeData",
+  "version": "0.0.0",
+  "homepage": "https://github.com/red-starter/2015-08-mvp",
+  "authors": [
+    "Mike Sova"
+  ],
+  "description": "Create graphs painlessly, effortlessly and quickly.",
+  "main": "server/server.js",
+  "keywords": [
+    "graphs",
+    "d3",
+    "angular"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
