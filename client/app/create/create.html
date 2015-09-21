@@ -1,0 +1,16 @@
+<form name="propForm">
+	<label for="propSelect"> Select the number of Properties </label>
+	<select name="propSelect" id="propSelect" ng-change="genModel()" ng-model="numSelected">
+		<option ng-repeat="n in []|range:0:upperbound" value="{{n}}">{{n}}</option>
+	</select>
+</form>
+<h3>number selected is = {{numSelected}}</h3>
+<h2> Keys </h2>
+
+<div class="keys" ng-repeat="n in [] | range:0:numSelected">
+<div class="container">
+	<input placeholder="Choose a key Name">
+	<input placeholder="Choose the data type">
+</div>
+</div>
+
