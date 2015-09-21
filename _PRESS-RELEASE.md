@@ -23,7 +23,8 @@ Once the project moves into development, the press release can be used as a touc
 
 ## Summary ##
 	If you want an slick graph on your website, don't look any further. 
-	This product will enable you to quickly produce an infinitely scalable svg graph for your website or blog. 
+	This product will enable you to quickly produce an infinitely scalable 
+	svg graph for your website or blog. 
 	Simply input the prameters you wish to be plotted and the settings desired to see 
 	in constant time how your graph will look. 
 	Copy the resulting graph to your website and marvel at your beautiful creation. 
