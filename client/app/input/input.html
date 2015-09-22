@@ -1,5 +1,23 @@
 <div id="conatiner">
-	<div ng-controller = "inputController">
-		<a href="#/input"> Next Step </a>
-	</div>
+	<a href="#graph"> Next Step </a>
+	<h2> Input new values </h2>
+	<form>
+		<div ng-repeat="element in userModel">
+			<div class="container">
+				<span>{{::element.dataName}}</span>
+				<input type="text" ng-model = element.dataName >
+				<span>{{::element.dataType}}</span>
+			</div>
+		</div>
+		<input type="submit" ng-click='saveInput()'>Save input</button>
+	</form>
+	<p>Saved Inputs </p>
+	<table>
+		<tr>
+			<th ng-repeat="dataName in modelPropertyNames">{{dataName}}</th>
+		</tr>
+		<tr ng-repeat="savedInput in inputs">
+			<td ng-repeat="data in savedInput">{{data}}</td>
+		</tr>
+	</table>
 </div>

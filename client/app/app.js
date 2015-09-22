@@ -10,7 +10,7 @@ app.config(function($routeProvider){
 		controller: 'createController'
 	})
 	.when('/input',{
-		templateUrl: 'app/input/input/html',
+		templateUrl: 'app/input/input.html',
 		controller: 'inputController'
 	})
 	.when('/graph',{
@@ -28,4 +28,21 @@ app.filter('range', function() {
       input.push(i);
     return input;
   };
+});
+
+//keep reference to user model
+app.factory('Data', function () {
+
+    var data = {
+        userModel: [{dataName:"countryName",dataType:"String"},{dataName:"GDP",dataType:"Number"},{dataName:"population",dataType:"Number"}]//delete later
+    };
+
+    return {
+        getData: function () {
+            return data.userModel;
+        },
+        setData: function (userModel) {
+            data.userModel = userModel;
+        }
+    };
 });

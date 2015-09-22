@@ -12,7 +12,10 @@ module.exports = function(grunt) {
         },
         watch: {
             files: ['client/**/*'],
-            tasks: ['jshint', 'mochaTest']
+            // tasks: ['jshint', 'mochaTest']
+             options: {
+      livereload: true,
+    },
         }
     });
 
@@ -23,6 +26,6 @@ module.exports = function(grunt) {
     // Main grunt tasks
     ////////////////////////////////////////////////////
 
-    grunt.registerTask('default', ['jshint', 'watch']);
+    grunt.registerTask('default');
 
 };
