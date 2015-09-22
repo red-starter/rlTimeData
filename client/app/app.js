@@ -34,7 +34,12 @@ app.filter('range', function() {
 app.factory('Data', function () {
 
     var data = {
-        userModel: [{dataName:"countryName",dataType:"String"},{dataName:"GDP",dataType:"Number"},{dataName:"population",dataType:"Number"}]//delete later
+        userModel: [
+        {dataName:"continent",dataType:"String"},
+        {dataName:"Life exp.",dataType:"Number"},
+        {dataName:"countryName",dataType:"String"},
+        {dataName:"GDP",dataType:"Number"},
+        {dataName:"population",dataType:"Number"}]//delete later
     };
 
     return {
@@ -46,3 +51,23 @@ app.factory('Data', function () {
         }
     };
 });
+app.factory('Input', function () {
+
+    var input = {
+        userInput: [{"continent":"Africa","Life exp.":55,"country":"zambia","GDP":500,"population":65000},
+                    {"continent":"EU","Life exp.":75,"country":"Slovakia","GDP":1000,"population":70000},
+                    {"continent":"America","Life exp.":80,"country":"USA","GDP":5000,"population":300000},
+                    {"continent":"EU","Life exp.":81,"country":"Germany","GDP":6000,"population":80000},
+                    {"continent":"America","Life exp.":69,"country":"Mexico","GDP":3000,"population":250000},
+                    {"continent":"EU","Life exp.":79,"country":"Czech","GDP":4000,"population":6000}]
+    };
+
+    return {
+        getInput: function () {
+            return input.userInput;
+        },
+        setInput: function (userInput) {
+            input.userInput = userInput;
+        }
+    };
+})

@@ -1,0 +1,49 @@
+
+<form name="propForm">
+  <label for="propSelect"> Select x-axis </label>
+  <select name="propSelect" id="propSelect" ng-change="genXaxis()" ng-model="xaxis">
+    <option ng-repeat="n in modelProperties" value="{{n}}">{{n}}</option>
+  </select>
+  <label for="propSelect"> Select y-axis </label>
+  <select name="propSelect" id="propSelect" ng-change="genModel()" ng-model="yaxis">
+    <option ng-repeat="n in modelProperties" value="{{n}}">{{n}}</option>
+  </select>
+  <label for="propSelect"> Select size scaler </label>
+  <select name="propSelect" id="propSelect" ng-change="genModel()" ng-model="size">
+    <option ng-repeat="n in modelProperties" value="{{n}}">{{n}}</option>
+  </select>
+  <label for="propSelect"> Select opacity scaler</label>
+  <select name="propSelect" id="propSelect" ng-change="genModel()" ng-model="opacity">
+    <option ng-repeat="n in modelProperties" value="{{n}}">{{n}}</option>
+  </select>
+  <label for="propSelect"> Select color scaler </label>
+  <select name="propSelect" id="propSelect" ng-change="genModel()" ng-model="color">
+    <option ng-repeat="n in modelProperties" value="{{n}}">{{n}}</option>
+  </select>
+</form>
+<div class="container">
+<div class="col-sm-5">
+<h4>domain selected is : {{xaxis}}</h4>
+<h4>range selected is : {{yaxis}}</h4>
+<h4>size scalar selected is : {{size}}</h4>
+<h4>opacity scalar is : {{opacity}}</h4>
+<h4>color scalar is : {{color}}</h4>
+<table class="table table-bordered">
+		<tr>
+			<th ng-repeat="element in modelProperties">{{::element}}</th>
+		</tr>
+		<tr ng-repeat="input in userInput">
+			<td ng-repeat="data in input">{{data}}</td>
+		</tr>
+</table>
+</div>
+
+<div class="col-sm-7" id="graph">
+</div>
+<!-- </div> -->
+<!-- <div class="keys" ng-repeat="n in [] | range:0:numSelected">
+  <div class="container">
+    <input placeholder="Choose a key Name">
+    <input placeholder="Choose the data type">
+  </div>
+</div> -->

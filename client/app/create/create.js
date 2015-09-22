@@ -14,8 +14,9 @@ angular.module('app.create', [])
         // 	})
         // }
 
+        $scope.userModel = []
         //mock data
-        $scope.userModel = [{dataName:"country",dataType:"String"},{dataName:"GDP",dataType:"Number"},{dataName:"pop",dataType:"Number"}];
+        // $scope.userModel = [{dataName:"country",dataType:"String"},{dataName:"GDP",dataType:"Number"},{dataName:"pop",dataType:"Number"}];
         $scope.submit = function() {
             if ($scope.dataType && $scope.dataName) {
                 $scope.userModel.push({dataName:this.dataName,dataType:this.dataType})

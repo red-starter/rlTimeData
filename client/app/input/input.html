@@ -1,12 +1,12 @@
 <div id="conatiner">
 	<h4> Input new values </h4>
-	<a href="#graph"> Show Graph </a>
 	<form class="form-horizontal">
 		<div  ng-repeat="element in userModel" class="form-group">
-			<label for="modelName" >Property:  <i> {{::element.dataName}} </i>Data Type:<i> {{::element.dataType}}</i></label>
-			<input type="text" class="form-control" placeholder="">
+			<label for="modelName" ><i> {{::element.dataName}} </i>Type:<i> {{::element.dataType}}</i></label>
+			<input type="text" class="form-control" ng-model=element.dataName placeholder="">
 		</div>
 		<button type="submit" class="btn btn-default" ng-click='saveInput()'>Save input</button>
+	<a href="#graph" ng-click="saveGraph()"> Show Graph </a>
 	</form>
 	<p>Saved Inputs </p>
 	<table class="table table-bordered">
