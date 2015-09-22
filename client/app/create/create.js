@@ -1,5 +1,5 @@
 angular.module('app.create', [])
-    .controller('createController', function($scope,Data) {
+    .controller('createController', function($scope,Model) {
         //where the selection gets saved
 
         // $scope.$watch('numSelected',function(){
@@ -15,7 +15,7 @@ angular.module('app.create', [])
         // }
 
         $scope.userModel = []
-        //mock data
+        //mock Model
         // $scope.userModel = [{dataName:"country",dataType:"String"},{dataName:"GDP",dataType:"Number"},{dataName:"pop",dataType:"Number"}];
         $scope.submit = function() {
             if ($scope.dataType && $scope.dataName) {
@@ -28,7 +28,7 @@ angular.module('app.create', [])
         }
 
         $scope.saveModel = function(){
-        	Data.setData($scope.userModel);
-        	console.log(Data.getData())
+        	Model.setModel($scope.userModel);
+        	console.log('saved model',Model.getModel())
         }
     })

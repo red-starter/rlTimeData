@@ -1,21 +1,16 @@
 angular.module('app.graph',[])
-.controller('graphController',function($scope,Data,Input){
+.controller('graphController',function($scope,Model,Input){
 	//get data off of controller
 
-	$scope.userModel = Data.getData();
+	// $scope.userModel = Model.getModel();
+	// console.log('userModel',$scope.userModel)
 	//pluck all data names into an array
 
-	$scope.modelProperties = [];
-	$scope.modelProperties = _.pluck($scope.userModel,'dataName')
+	$scope.modelProperties = Model.getProps();
+	console.log('modelProperties',$scope.modelProperties)
 
 	$scope.userInput = Input.getInput();
-	// console.log($scope.userInput);
-
-
-	// console.log(modelPropertyNames)
-	// console.log($scope.userModel);
-	//$scope.xaxis
-	//default scaler
+	console.log('UserInput',$scope.userInput);
 
 	//create svg
 	var options ={
@@ -107,7 +102,7 @@ angular.module('app.graph',[])
 			.attr('fill',function(d){return mapColor(d[$scope.color])})
 			.attr('opacity',function(d){return mapOpacity(d[$scope.opacity])})
 			.append('title')
-			// .text(function(d){return d[$scope.name]})
+			.text(function(d){return d.toString()})
 		}	
 		
 })

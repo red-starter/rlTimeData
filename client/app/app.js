@@ -31,9 +31,11 @@ app.filter('range', function() {
 });
 
 //keep reference to user model
-app.factory('Data', function () {
+app.factory('Model', function () {
 
-    var data = {
+
+    var model = {
+        // userModel:[]
         userModel: [
         {dataName:"continent",dataType:"String"},
         {dataName:"Life exp.",dataType:"Number"},
@@ -42,18 +44,25 @@ app.factory('Data', function () {
         {dataName:"population",dataType:"Number"}]//delete later
     };
 
+    var modelPropertyNames = _.pluck(model.userModel,'dataName');
+
     return {
-        getData: function () {
-            return data.userModel;
+        getModel: function () {
+            return model.userModel;
         },
-        setData: function (userModel) {
-            data.userModel = userModel;
+        getProps: function () {
+            return modelPropertyNames;
+        },
+        setModel: function (userModel) {
+            model.userModel = userModel;
+            modelPropertyNames = _.pluck(userModel,'dataName')
         }
     };
 });
 app.factory('Input', function () {
 
     var input = {
+        // userInput:[]
         userInput: [{"continent":"Africa","Life exp.":55,"country":"zambia","GDP":500,"population":65000},
                     {"continent":"EU","Life exp.":75,"country":"Slovakia","GDP":1000,"population":70000},
                     {"continent":"America","Life exp.":80,"country":"USA","GDP":5000,"population":300000},
