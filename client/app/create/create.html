@@ -1,38 +1,56 @@
-<a href="#input" ng-click="saveModel()">Finished with the User model</a>
-<form >
-  Enter text and hit enter:
-  <input type="text" ng-model="dataName" name="text" />
-  <input type="text" ng-model="dataType" name="text" />
-  <input ng-click="submit()" type="submit" id="submit" value="Submit" />
-</form>
-  <p>Generated model </p>
-  <table>
-  	<tr>
-  		<th>Property name</th>
-  		<th>Data type</th>
-  		<th>Delete</th>
-  	</tr>
-  	<tr ng-repeat="element in userModel">
-  		<td>{{element.dataName}}</td>
-  		<td>{{element.dataType}}</td>
-  		<td><input ng-click="remove($index)" type="checkbox"/></td>
-  	</tr>
-  </table>
-
-<!-- 
-  <form name="propForm">
-	<label for="propSelect"> Select the number of Properties </label>
-	<select name="propSelect" id="propSelect" ng-change="genModel()" ng-model="numSelected">
-		<option ng-repeat="n in []|range:0:upperbound" value="{{n}}">{{n}}</option>
-	</select>
+<div class="container">
+  <div class="form-group">
+    <form class="form-horizontal">
+      <div class="form-group">
+        <label for="modelName" class="col-sm-2 control-label">Property name</label>
+        <div class="col-sm-10">
+          <input type="text" ng-model="dataName" class="form-control" id="modelName" placeholder="Model name">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="data type" class="col-sm-2 control-label">Data type</label>
+        <div class="col-sm-10">
+          <input type="text" ng-model="dataType" class="form-control" id="data type" placeholder="Data type">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <button type="submit" ng-click="submit()" class="btn btn-default">Add property</button>
+          <a href="#input" ng-click="saveModel()"> Finished with the User Model</a>
+        </div>
+      </div>
+    </form>
+    <div class="container">
+      <p>Generated model </p>
+      <table class="table table-bordered">
+        <tr>
+          <th>Property name</th>
+          <th>Data type</th>
+          <th>Delete</th>
+        </tr>
+        <tr ng-repeat="element in userModel">
+          <td>{{element.dataName}}</td>
+          <td>{{element.dataType}}</td>
+          <td><input ng-click="remove($index)" type="checkbox"/></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+<!--
+<form name="propForm">
+  <label for="propSelect"> Select the number of Properties </label>
+  <select name="propSelect" id="propSelect" ng-change="genModel()" ng-model="numSelected">
+    <option ng-repeat="n in []|range:0:upperbound" value="{{n}}">{{n}}</option>
+  </select>
 </form>
 <h3>number selected is = {{numSelected}}</h3>
 <h2> Keys </h2>
-	<div class="keys" ng-repeat="n in [] | range:0:numSelected">
-		<div class="container">
-			<input placeholder="Choose a key Name">
-			<input placeholder="Choose the data type">
-		</div>
-	</div>
-	</div>
+<div class="keys" ng-repeat="n in [] | range:0:numSelected">
+  <div class="container">
+    <input placeholder="Choose a key Name">
+    <input placeholder="Choose the data type">
+  </div>
+</div>
+</div>
 </div> -->

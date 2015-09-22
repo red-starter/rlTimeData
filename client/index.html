@@ -2,34 +2,37 @@
 <html ng-app='app'>
   <head>
     <meta charset="utf-8" />
-    <title>rlTimeData</title>
-    <link rel="stylesheet" type="text/css" href="styles/style.css" />
-    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
-  </head>
-  <body>
-    <h1>rlTimeData</h1>
-    <a href="#create">Create a new graph</a>
+    <div class="container">
+      <title>rlTimeData</title>
+      <link rel="stylesheet" type="text/css" href="styles/style.css" />
+      <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    </head>
+    <body>
+      <h3 class="text-center">realTimeData</h3>
+    <div class="form-group">
+      <a class="btn btn-default pull-right" href="#create" role="button">Start a new Graph</a>
+
+    </div>
+      <div class="page-header">
+      </div>
     <!-- the ng-view directive is where our templates will be loaded into when navigated to -->
-    <div ng-view>
+    <div class="container" ng-view>
       
     </div>
-    <!-- why never works??? -->
-   <!--  <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.css"></link> -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/underscore/underscore.js"></script>
-    <script src="bower_components/underscore/underscore.js"></script>
-    <!-- <link rel href="bower_components/bootstrap/dist/css/bootstrap.css"></link> -->
-    <!-- // <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script> -->
-
-
-
-
-    <script src="app/create/create.js"></script>
-    <script src="app/input/input.js"></script>
-    <script src="app/graph/graph.js"></script>
-    <script src="app/services/services.js"></script>
-    <script src="app/app.js"></script>
   </body>
+  <!-- why never works??? -->
+  <!--  <link rel="stylesheet" href="bower_components/bootstrap-css/css/bootstrap.css"></link> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <script src="bower_components/underscore/underscore.js"></script>
+  <!-- <link rel href="bower_components/bootstrap/dist/css/bootstrap.css"></link> -->
+  <!-- // <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script> -->
+  <script src="app/create/create.js"></script>
+  <script src="app/input/input.js"></script>
+  <script src="app/graph/graph.js"></script>
+  <script src="app/services/services.js"></script>
+  <script src="app/app.js"></script>
+</body>
 </html>
