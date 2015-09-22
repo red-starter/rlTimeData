@@ -9,15 +9,15 @@
     <option ng-repeat="n in modelProperties" value="{{n}}">{{n}}</option>
   </select>
   <label for="propSelect"> Select size scaler </label>
-  <select name="propSelect" id="propSelect" ng-change="genModel()" ng-model="size">
+  <select name="propSelect" id="propSelect" ng-change="initAxis()" ng-model="size">
     <option ng-repeat="n in modelProperties" value="{{n}}">{{n}}</option>
   </select>
   <label for="propSelect"> Select opacity scaler</label>
-  <select name="propSelect" id="propSelect" ng-change="genModel()" ng-model="opacity">
+  <select name="propSelect" id="propSelect" ng-change="initAxis()" ng-model="opacity">
     <option ng-repeat="n in modelProperties" value="{{n}}">{{n}}</option>
   </select>
   <label for="propSelect"> Select color scaler </label>
-  <select name="propSelect" id="propSelect" ng-change="genModel()" ng-model="color">
+  <select name="propSelect" id="propSelect" ng-change="initAxis()" ng-model="color">
     <option ng-repeat="n in modelProperties" value="{{n}}">{{n}}</option>
   </select>
 </form>
@@ -37,13 +37,7 @@
 		</tr>
 </table>
 </div>
-
+<div class="container">
 <div class="col-sm-8" id="graph">
 </div>
-<!-- </div> -->
-<!-- <div class="keys" ng-repeat="n in [] | range:0:numSelected">
-  <div class="container">
-    <input placeholder="Choose a key Name">
-    <input placeholder="Choose the data type">
-  </div>
-</div> -->
+</div>
