@@ -103,6 +103,8 @@ angular.module('app.graph',[])
 			.attr('opacity',function(d){return mapOpacity(d[$scope.opacity])})
 			.append('title')
 			.text(function(d){return d.toString()})
+			$('#data').text(d3.select('#graph').html())
 		}	
-		
+		$('#data').text(d3.select('#graph').html())
+		//append html for easy copy pasta
 })
